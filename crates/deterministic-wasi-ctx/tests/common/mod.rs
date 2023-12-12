@@ -14,6 +14,7 @@ pub fn create_instance(module_name: &str) -> (Store<WasiCtx>, Instance) {
     let instance = linker.instantiate(&mut store, &module).unwrap();
     (store, instance)
 }
+
 pub fn invoke_func<Params, Results>(
     mut store: Store<WasiCtx>,
     instance: Instance,
