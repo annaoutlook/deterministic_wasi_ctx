@@ -15,6 +15,8 @@ pub fn create_instance(module_name: &str) -> (Store<WasiCtx>, Instance) {
     (store, instance)
 }
 
+
+
 pub fn invoke_func<Params, Results>(
     mut store: Store<WasiCtx>,
     instance: Instance,
